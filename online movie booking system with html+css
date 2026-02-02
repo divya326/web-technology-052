@@ -86,9 +86,9 @@
 </div>
 
 <div class="box" id="success">
-  <h2>Booking Confirmed ✅</h2>
+  <h2>Booking Confirmed </h2>
   <p><b>Your movie ticket has been booked successfully.</b></p>
-  <p>Enjoy your movie 🍿</p>
+  <p>Enjoy your movie </p>
 </div>
 
 </body>
