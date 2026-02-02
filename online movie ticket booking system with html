@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Movie Ticket Booking</title>
+</head>
+<body>
+
+<h2>Online Movie Ticket Booking System</h2>
+
+
+<form action="#confirm">
+
+  <label>Movie:</label><br>
+  <select>
+    <option>Leo</option>
+    <option>Jailer</option>
+    <option>Vikram</option>
+  </select><br><br>
+
+  <label>Theatre:</label><br>
+  <input type="text"><br><br>
+
+  <label>Show Time:</label><br>
+  <select>
+    <option>Morning</option>
+    <option>Afternoon</option>
+    <option>Night</option>
+  </select><br><br>
+
+  <label>No of Tickets:</label><br>
+  <input type="number" min="1"><br><br>
+
+  <label>Name:</label><br>
+  <input type="text"><br><br>
+
+  <input type="submit" value="Confirm Booking">
+
+</form>
+
+<hr>
+
+
+<h3 id="confirm">Booking Confirmed ✅</h3>
+<p>Your movie ticket has been booked successfully.</p>
+<p>Enjoy your movie 🍿</p>
+
+</body>
+</html>
