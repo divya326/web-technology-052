@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Movie Ticket Booking</title>
+
+  <style>
+    body {
+      font-family: Arial;
+      background-color: #f2f2f2;
+    }
+
+    .box {
+      width: 400px;
+      background: white;
+      padding: 20px;
+      margin: 50px auto;
+      border-radius: 10px;
+    }
+
+    h2 {
+      text-align: center;
+    }
+
+    label {
+      font-weight: bold;
+    }
+
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin: 8px 0 15px 0;
+    }
+
+    button {
+      width: 100%;
+      padding: 10px;
+      background-color: #e50914;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+    }
+
+    #success {
+      display: none;
+      text-align: center;
+    }
+
+    #success:target {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="box">
+  <h2>Movie Ticket Booking</h2>
+
+  <form action="#success">
+    <label>Movie</label>
+    <select required>
+      <option>Leo</option>
+      <option>Jailer</option>
+      <option>Vikram</option>
+    </select>
+
+    <label>Theatre</label>
+    <input type="text" required>
+
+    <label>Show Time</label>
+    <select required>
+      <option>Morning</option>
+      <option>Evening</option>
+      <option>Night</option>
+    </select>
+
+    <label>No of Tickets</label>
+    <input type="number" min="1" required>
+
+    <label>Name</label>
+    <input type="text" required>
+
+    <button type="submit">Confirm Booking</button>
+  </form>
+</div>
+
+<div class="box" id="success">
+  <h2>Booking Confirmed ✅</h2>
+  <p><b>Your movie ticket has been booked successfully.</b></p>
+  <p>Enjoy your movie 🍿</p>
+</div>
+
+</body>
+</html>
