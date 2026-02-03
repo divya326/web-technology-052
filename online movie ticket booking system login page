@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Ticket Booking - Login</title>
+
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+
+            /* Movie / Ticket background */
+            background: linear-gradient(
+                rgba(0,0,0,0.7),
+                rgba(0,0,0,0.7)
+            ),
+            url("https://i.imgur.com/8IhQZ0N.jpg");
+            background-size: cover;
+            background-position: center;
+        }
+
+        .login-box {
+            background: #ffffff;
+            padding: 25px;
+            width: 320px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.5);
+        }
+
+        h2 {
+            text-align: center;
+            color: #e50914;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 8px;
+            margin-top: 8px;
+        }
+
+        input[type="submit"] {
+            background: #e50914;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-top: 12px;
+        }
+
+        input[type="submit"]:hover {
+            background: #b20710;
+        }
+    </style>
+
+    <script>
+        function validateForm() {
+
+            var fname = document.getElementById("fname").value;
+            var lname = document.getElementById("lname").value;
+            var password = document.getElementById("password").value;
+            var email = document.getElementById("email").value;
+            var mobile = document.getElementById("mobile").value;
+            var address = document.getElementById("address").value;
+
+            var namePattern = /^[A-Za-z]+$/;
+            var emailPattern = /^[a-zA-Z0-9._]+@[a-zA-Z]+\.[a-zA-Z]{2,}$/;
+            var mobilePattern = /^[0-9]{10}$/;
+
+            if (fname.length < 6 || !fname.match(namePattern)) {
+                alert("First Name must contain alphabets only and minimum 6 characters");
+                return false;
+            }
+
+            if (lname === "") {
+                alert("Last Name cannot be empty");
+                return false;
+            }
+
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters");
+                return false;
+            }
+
+            if (!email.match(emailPattern)) {
+                alert("Enter a valid Email ID");
+                return false;
+            }
+
+            if (!mobile.match(mobilePattern)) {
+                alert("Mobile number must contain 10 digits");
+                return false;
+            }
+
+            if (address === "") {
+                alert("Address cannot be empty");
+                return false;
+            }
+
+            alert("Login Successful! Enjoy booking movies 🎥🍿");
+            return true;
+        }
+    </script>
+</head>
+
+<body>
+
+<div class="login-box">
+    <h2>🎟️ Movie Ticket Login</h2>
+
+    <form onsubmit="return validateForm()">
+        First Name:
+        <input type="text" id="fname">
+
+        Last Name:
+        <input type="text" id="lname">
+
+        Password:
+        <input type="password" id="password">
+
+        Email ID:
+        <input type="text" id="email">
+
+        Mobile Number:
+        <input type="text" id="mobile">
+
+        Address:
+        <textarea id="address"></textarea>
+
+        <input type="submit" value="Login">
+    </form>
+</div>
+
+</body>
+</html>
