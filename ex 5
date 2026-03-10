@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>HTTP GET vs POST Demo</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+height:100vh;
+display:flex;
+background:linear-gradient(to right,#0f2027,#203a43,#2c5364);
+}
+
+.half{
+width:50%;
+display:flex;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+color:white;
+padding:40px;
+}
+
+.get-side{
+background:rgba(255,0,150,0.1);
+backdrop-filter:blur(10px);
+border-right:2px solid rgba(255,255,255,0.2);
+}
+
+.post-side{
+background:rgba(0,255,200,0.1);
+backdrop-filter:blur(10px);
+}
+
+h1{
+margin-bottom:20px;
+}
+
+form{
+width:80%;
+text-align:center;
+}
+
+input{
+width:100%;
+padding:12px;
+margin:10px 0;
+border:none;
+border-radius:25px;
+outline:none;
+}
+
+.btn-get{
+background:#ff0080;
+color:white;
+cursor:pointer;
+}
+
+.btn-get:hover{
+background:white;
+color:#ff0080;
+}
+
+.btn-post{
+background:#00ffc3;
+color:black;
+cursor:pointer;
+}
+
+.btn-post:hover{
+background:black;
+color:#00ffc3;
+}
+
+.info{
+margin-top:15px;
+font-size:14px;
+opacity:0.8;
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- GET METHOD FORM -->
+
+<div class="half get-side">
+
+<h1>GET Method</h1>
+
+<form method="get" action="GetPostServlet">
+
+<input type="text" name="username" placeholder="Enter Name" required>
+
+<input type="email" name="email" placeholder="Enter Email" required>
+
+<input type="password" name="password" placeholder="Enter Password" required>
+
+<input type="submit" value="Submit using GET" class="btn-get">
+
+</form>
+
+<div class="info">
+✔ Data visible in URL <br>
+✔ Faster request <br>
+❌ Not secure for sensitive data
+</div>
+
+</div>
+
+
+<!-- POST METHOD FORM -->
+
+<div class="half post-side">
+
+<h1>POST Method</h1>
+
+<form method="post" action="GetPostServlet">
+
+<input type="text" name="username" placeholder="Enter Name" required>
+
+<input type="email" name="email" placeholder="Enter Email" required>
+
+<input type="password" name="password" placeholder="Enter Password" required>
+
+<input type="submit" value="Submit using POST" class="btn-post">
+
+</form>
+
+<div class="info">
+✔ Data hidden in request body <br>
+✔ More secure than GET <br>
+✔ Used for login / registration
+</div>
+
+</div>
+
+</body>
+</html>
